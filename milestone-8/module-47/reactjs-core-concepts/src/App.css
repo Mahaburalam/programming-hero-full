@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.student{
+  color: rgb(225, 230, 217);
+  background-color: forestgreen;
+  padding: 7px;
+  border-radius: 9px;
+}
+
