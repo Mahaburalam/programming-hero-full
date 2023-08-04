@@ -44,3 +44,11 @@
   border-radius: 9px;
 }
 
+.country-style{
+  color: rgb(225, 230, 217);
+  background-color: rgb(85, 211, 85);
+  padding: 7px;
+  border-radius: 9px;
+  margin: 7px;
+  border: 2px solid darkgrey;
+}
