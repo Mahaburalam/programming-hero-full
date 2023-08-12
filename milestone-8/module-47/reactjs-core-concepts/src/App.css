@@ -52,3 +52,13 @@
   margin: 7px;
   border: 2px solid darkgrey;
 }
+
+/* user style */
+.user-style{
+  background-color: rgb(176, 196, 233);
+  color:#81562d;
+  border: 2px dotted tomato;
+  border-radius: 30px;
+  margin: 12px;
+  padding: 7px;
+}
