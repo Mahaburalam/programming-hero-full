@@ -3,7 +3,7 @@ import "./SingleCountry.css";
 
 const SingleCountry = (props) => {
     console.log(props.country);
-    const {name, capital, region, area, population, timeZone, flags} = props.country
+    const {name, capital, region, area, population, timezones, flags} = props.country
     return (
         <div className='country-style'>
 
@@ -14,7 +14,7 @@ const SingleCountry = (props) => {
             <p>Region : {region}</p>
             <p>Area : {area}</p>
             <p>Population : {population}</p>
-            <p>Time Zone : {timeZone}</p>
+            <p>Time Zone : {timezones}</p>
 
 
             {/* modern way to view data */}
