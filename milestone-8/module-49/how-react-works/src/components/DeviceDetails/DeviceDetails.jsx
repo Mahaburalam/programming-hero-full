@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DeviceDetails = (props) => {
-    console.log(props);
+    // console.log(props);
     return (
         <div>
             <h4>Device Price is : {props.price}</h4>
