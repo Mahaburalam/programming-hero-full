@@ -2,6 +2,7 @@ import './App.css'
 import Add from './components/Calculator/Add'
 import Country from './components/Country/Country'
 import Department from './components/Department/Department'
+import Users from './components/Users/Users'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Department></Department>
         <Add></Add>
         <Country></Country>
+        <Users></Users>
       </div>
     </>
   )
