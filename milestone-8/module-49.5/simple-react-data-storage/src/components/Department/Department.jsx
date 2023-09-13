@@ -28,6 +28,7 @@ const ViewDept = (props) =>{
             <p>ID : {id}</p>
             <p>Department Name : {name}</p>
             <p>Department Location : {location}</p>
+            <button style={{backgroundColor:"lightblue", margin:"7px 0 15px 0"}}>Add To Cart</button>
         </div>
     )
 }
