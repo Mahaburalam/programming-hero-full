@@ -23,12 +23,19 @@ const Department = () => {
 const ViewDept = (props) =>{
     // console.log(props.data);
     const {name, location, id} = props.deptInfo;
+    const addToCart = (id)=>{
+        console.log("New Item Added",id);
+    }
+    // const signleItemAdded = ()=>{
+    //     addToCart(id);
+    // }
     return(
         <div style={{border:"2px solid gray", margin:"7px"}}>
             <p>ID : {id}</p>
             <p>Department Name : {name}</p>
             <p>Department Location : {location}</p>
-            <button style={{backgroundColor:"lightblue", margin:"7px 0 15px 0"}}>Add To Cart</button>
+            {/* <button onClick={signleItemAdded} style={{backgroundColor:"lightblue", margin:"7px 0 15px 0"}}>Add To Cart</button> */}
+            <button onClick={()=>addToCart(id)} style={{backgroundColor:"lightblue", margin:"7px 0 15px 0"}}>Add To Cart</button>
         </div>
     )
 }
