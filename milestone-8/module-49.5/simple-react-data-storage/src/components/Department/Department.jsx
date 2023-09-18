@@ -24,7 +24,8 @@ const ViewDept = (props) =>{
     // console.log(props.data);
     const {name, location, id} = props.deptInfo;
     const addToCart = (id)=>{
-        console.log("New Item Added",id);
+        // console.log("New Item Added",id);
+        localStorage.setItem(id, 'new')
     }
     // const signleItemAdded = ()=>{
     //     addToCart(id);
