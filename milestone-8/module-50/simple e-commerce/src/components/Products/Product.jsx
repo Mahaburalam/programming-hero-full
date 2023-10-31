@@ -15,6 +15,7 @@ const Product = (props) => {
                 <p>Manufacturer : {seller}</p>
                 <p>Rating : {ratings} star</p>
             </div>
+            <button className='cart-add'>Add to cart</button>
         </div>
     );
 };
