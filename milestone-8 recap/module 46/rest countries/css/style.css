@@ -1,0 +1,21 @@
+.country-style{
+    border: 2px dotted greenyellow;
+    border-radius: 7px;
+    background-color: bisque;
+    padding: 10px;
+    
+    /* grid-template-rows: repeat(3, 2fr); */
+    
+}
+.country-style img{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+#countries{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+
+}
