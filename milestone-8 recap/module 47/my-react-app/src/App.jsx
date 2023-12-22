@@ -1,48 +1,65 @@
 import './App.css'
+import propTypes from 'prop-types';
+
+// Your component code here
+
 
 function App() {
+  // array of country
+  const countryInfos = ["Bangladesh", "Pakistan", "China", 'Japan', 'Korea', 'Germany', 'USA', 'Australia', 'Canada']
+
+  const fruits = [
+    { id: 1, name: 'Apple', color: 'Red', quantity: 10 },
+    { id: 2, name: 'Banana', color: 'Yellow', quantity: 7 },
+    { id: 3, name: 'Orange', color: 'Orange', quantity: 5 },
+  ];
+
   return (
     <>
       <div>
-        <h1>This is my personal info</h1>
-        <h3>Dynamic Component, pass data through Props</h3>
-        {/* component call */}
-        {/* pass dynamic data through props in component*/}
-        <Myinfo name="Md Mahabur Alam" prof="Software Developer" country='Bangladesh' homeDis="Khulna"></Myinfo>
-        <Myinfo name="Germany" prof="Europe" country="Test" homeDis="New Test"></Myinfo>
-        {/* <p>This is my family info</p> */}
-        {/* another component call */}
-        <h1>This is my family background</h1>
-        <h3>Static Component</h3>
-        <Mybio></Mybio>
-        <Mybio></Mybio>
-        <Mybio></Mybio>
+        {
+          countryInfos.map(countryInfo => <li> Name: {countryInfo}</li>)
+        }
+        {/* <FavouriteCountry></FavouriteCountry> */}
+        <h2>Fully Dynamic Data pass to component through props</h2>
+        {/* show data from array */}
+        {
+          countryInfos.map(countryInfo => <FavouriteCountry cName={countryInfo}></FavouriteCountry>)
+        }
+
+        {/* array of object */}
+        {
+          fruits.map(fruit => <FavouriteFood key={fruit.id} name={fruit.name} 
+          color={fruit.color}
+          quantity = {fruit.quantity}
+          ></FavouriteFood>)
+        }
       </div>
     </>
   )
 }
 
-// finctional component
-function Myinfo(props){
+// functional component
+function FavouriteCountry(props)
+{
   console.log(props);
   return(
-    <div className='my-bio'>
-      <h3>Name: {props.name}</h3>
-      <h5>Profession: {props.prof}</h5>
-      <p>Country: {props.country}</p>
-      <p>Home District: {props.homeDis}</p>
+    <div className="fav-country">
+      <h4>Country Name: {props.cName}</h4>
     </div>
   )
 }
 
 // another functional component
-function Mybio(){
+function FavouriteFood(props){
+  console.log(props);
   return(
-    <div className='family-info-style'>
-      <p>My Wife Name: Nusrat Jahan</p>
-      <p>My Child Name: Ahanaf Anas</p>
-      <p>Family Bacground: My Mother is a Teacher and Father is a Business Man</p>
+    <div className='food-style'>
+      <p>Name: {props.name}</p>
+      <p>Color: {props.color}</p>
+      <p>Quantity: {props.quantity}</p>
     </div>
   )
 }
+
 export default App
