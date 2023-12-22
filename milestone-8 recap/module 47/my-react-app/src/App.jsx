@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-key */
 import './App.css'
-import propTypes from 'prop-types';
+// import propTypes from 'prop-types';
 
 // Your component code here
 
