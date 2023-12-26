@@ -1,0 +1,11 @@
+.single-country{
+    border: 2px solid greenyellow;
+    border-radius: 13px;
+    padding: 7px;
+    margin: 5px;
+    /* display: block; */
+}
+
+.single-country img{
+    width: 250px;
+}
