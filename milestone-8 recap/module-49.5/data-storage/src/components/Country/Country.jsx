@@ -8,7 +8,6 @@ const Country = () => {
     const subResult = subtraction(firstNumber, secondNumber);
     return (
         <div>
-            <h2>Total no of country i visited: 23</h2>
             <p>Multiply of two number is:{multiplyResult}</p>
             <p>Subtraction of two number is:{subResult}</p>
         </div>
