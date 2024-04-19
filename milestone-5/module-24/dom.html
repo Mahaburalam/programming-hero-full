@@ -12,16 +12,64 @@
     </style>
 </head>
 <body>
-    <h2>Introduction to javaScript DOM - Document Object Model</h2>
-    <h2>Styling List Element</h2>
-    <ul>
-        <li>Dhaka</li>
-        <li>Khulna</li>
-        <li>Barishal</li>
-    </ul>
+    <header>
+        <h2>Introduction to javaScript DOM - Document Object Model</h2>
+    </header>
+    <main>
+        <h2>Styling List Element</h2>
+        <ul>
+            <li>Dhaka</li>
+            <li>Khulna</li>
+            <li>Barishal</li>
+            <li>Satkhira</li>
+        </ul>
+        <section>
+            <h3>Beautiful Places</h3>
+            <ul id="place-iteam">
+                <li class="place-style">Thailand</li>
+                <li class="place-style">Singapur</li>
+                <li class="place-style">Bali</li>
+                <li class="place-style">Fucet</li>
+            </ul>
+        </section>
+        <section>
+            <h3 id="country-name">Beautiful Country</h3>
+            <ul class="country-list">
+                <li>Australia</li>
+                <li>Canada</li>
+                <li>Germany</li>
+            </ul>
+        </section>
+        <section class="fruits">
+            <h1>Available Fruits</h1>
+            <ui>
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Watermelon</li>
+                <li>Jackfruits</li>
+                <li>Pineapple</li>
+            </ui>
+        </section>
+    </main>
     <script src="./js/dom.js"></script>
     <script>
-        console.log(document);
+        console.log(document.getElementsByTagName('li'));
+
+        const listElement = document.getElementsByTagName('li');
+        for(const li of listElement)
+        {
+            console.log(li.innerText);
+            console.log(li.innerHTML);
+            console.log('\n');
+        }
+
+        const heading = document.getElementsByTagName('h2');
+        for(let h2 of heading)
+        {
+            console.log(h2.innerHTML);
+        }
     </script>
+    <script src="./js/dom-element.js"></script>
+    <script src="./js/dom-querySelector.js"></script>
 </body>
 </html>
