@@ -27,3 +27,13 @@ console.log(title.classList);
 // remove call by javascript
 title.classList.remove('new3')
 console.log(title.classList);
+
+const selectElement = document.querySelectorAll('section')
+for(const select of selectElement)
+{
+    // console.log(select);
+    select.style.border = "3px solid #ebab34";
+    select.style.marginBottom = "7px";
+    select.style.borderRadius = '13px';
+    select.style.padding = '12px';
+}
