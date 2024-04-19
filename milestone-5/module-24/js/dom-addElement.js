@@ -47,3 +47,17 @@ for(const sectionStyle of sectionStyles)
     sectionStyle.style.padding = "10px"
 
 }
+
+const sectionTarget = document.createElement("section");
+sectionTarget.innerHTML = `
+    <h1>My personal target in next few year</h1>
+    <ul>
+        <li>Learning Front End Perfectly</li>
+        <li>Learning Python -2025</li>
+        <li>Buying A/C for my house</li>
+        <li>Buying TV</li>
+        <li>Setting IELTS Exam</li>
+    </ul>
+`
+main.appendChild(sectionTarget);
+sectionTarget.classList.add("section-style");
