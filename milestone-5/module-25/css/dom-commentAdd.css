@@ -1,0 +1,17 @@
+#section-div section{
+    border: 2px solid aquamarine;
+    border-radius: 13px;
+    margin-bottom: 7px;
+    padding: 13px;
+    background-color: blueviolet;
+    color: rgb(253, 253, 253);
+    font-size: 22px;
+}
+#post-button{
+    background-color: teal;
+    color: thistle;
+    font-size: 30px;
+    padding: 10px 30px;
+    margin: 10px;
+    text-align: center;
+}
