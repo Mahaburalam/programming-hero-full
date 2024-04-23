@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM propagation event</title>
+    <style>
+        #div-section{
+            border: 2px dotted darkorchid;
+        }
+        #div-section p{
+            border: 3px solid greenyellow;
+            padding: 5px;
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+    <main id="main-section">
+        <div id="div-section">
+            <p id="item-1">Lorem ipsum dolor sit amet.</p>
+            <p id="item-2">Repellat cum unde repudiandae quia.</p>
+            <p id="item-3">Quo et sit placeat porro!</p>
+            <p id="item-4">Porro, est perspiciatis? At, id.</p>
+            <p id="item-5">Voluptatum officia maiores quia quam.</p>
+        </div>
+    </main>
+    <script src="./js/propagation-event.js"></script>
+</body>
+</html>
