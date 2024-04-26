@@ -37,4 +37,44 @@ document.getElementById('deposit-button').addEventListener('click', function(){
     // step-9: clear deposit input field
     depositInput.value = '';
 
+});
+
+// withdraw part
+// step-1 get withdraw button 
+document.getElementById('withdraw-button').addEventListener('click', function(){
+
+    // step-2 withdraw input field
+    const withdrawInput = document.getElementById('withdraw-input-field');
+    // console.log(withdrawInput);
+    
+    // step-3 withdraw input field get value and conversion string to number 
+    const withdrawInputString = withdrawInput.value;
+    const newWithdrawAmount = Number(withdrawInputString);
+
+    // step-4 previous withdraw element
+    const withdrawElement = document.getElementById('withdraw-balance');
+    //step-5 previous withdraw element value and convert string to number
+    const withdrawBalanceString = withdrawElement.innerText;
+    const previousWithdrawAmount = Number(withdrawBalanceString);
+
+    // step-6 calculate total withdraw amount
+    const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
+
+    // step-7 set total withdraw amount
+    withdrawElement.innerText = totalWithdrawAmount;
+
+    // step-8 get previous total balance and convert sting to number
+    const totalBalanceElement = document.getElementById('total-balance');
+    const totalBalance = totalBalanceElement.innerText;
+    const newTotalBalance = Number(totalBalance);
+
+    // step-9 calculate new total balance 
+    const currentBalanceAfterWithdraw = newTotalBalance - newWithdrawAmount;
+
+    // step-10
+    totalBalanceElement.innerText = currentBalanceAfterWithdraw;
+    
+    // step-11
+    withdrawInput.value = '';
+
 })
