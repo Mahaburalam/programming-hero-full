@@ -51,11 +51,19 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const withdrawInputString = withdrawInput.value;
     const newWithdrawAmount = Number(withdrawInputString);
 
+    
+
     // step-4 previous withdraw element
     const withdrawElement = document.getElementById('withdraw-balance');
     //step-5 previous withdraw element value and convert string to number
     const withdrawBalanceString = withdrawElement.innerText;
     const previousWithdrawAmount = Number(withdrawBalanceString);
+
+    // if(isNaN(newWithdrawAmount))
+    // {
+    //     alert("Please enter a valid number");
+    //     return;
+    // }
 
     // step-6 calculate total withdraw amount
     const totalWithdrawAmount = newWithdrawAmount + previousWithdrawAmount;
