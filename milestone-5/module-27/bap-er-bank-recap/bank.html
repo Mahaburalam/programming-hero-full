@@ -11,14 +11,16 @@
     <header>
         <h2 class="text-5xl text-center my-9">Welcome to 
             <span class="text-lime-400">Bap Er Bank!!</span>
+            <button id="logout-btn" class="text-3xl ms-20 bg-sky-700 text-white px-8 py-2 rounded-xl">Logout</button>
         </h2>
+        
     </header>
     <main>
         <section >
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
                 <div class="bg-teal-400 px-7 py-9 rounded-2xl">
                     <h2 class="text-4xl">Deposit</h2>
-                    <h3 class="text-5xl">$<span>00</span></h3>
+                    <h3 class="text-5xl">$ <span id="deposit-amount">00</span></h3>
                 </div>
                 <div class="bg-purple-400 px-7 py-9 rounded-2xl">
                     <h2 class="text-4xl">Withdraw</h2>
@@ -26,7 +28,7 @@
                 </div>
                 <div class="bg-orange-400 px-7 py-9 rounded-2xl">
                     <h2 class="text-4xl">Balance</h2>
-                    <h3 class="text-5xl">$ <span>1250</span></h3>
+                    <h3 class="text-5xl">$ <span id="current-balance">1250</span></h3>
                 </div>
             </div>
         </section>
@@ -34,8 +36,8 @@
             <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto my-7">
                 <div class="bg-fuchsia-400 px-7 py-8 rounded-2xl">
                     <h2 class="text-white text-4xl pb-4">Please Deposit</h2>
-                    <input class="block w-10/12 mb-4 px-2 py-3 rounded-xl" type="text" placeholder="$ amount you want to deposit">
-                    <button class="text-white text-xl bg-purple-600 px-6 py-2 rounded-xl hover:bg-sky-700">Deposit</button>
+                    <input id="deposit-input" class="block w-10/12 mb-4 px-2 py-3 rounded-xl" type="text" placeholder="$ amount you want to deposit">
+                    <button id="deposit-btn" class="text-white text-xl bg-purple-600 px-6 py-2 rounded-xl hover:bg-sky-700">Deposit</button>
                 </div>
                 <div class="bg-indigo-400 px-7 py-8 rounded-2xl">
                     <h2 class="text-white text-4xl pb-4">Please Withdraw</h2>
@@ -45,5 +47,8 @@
             </div>
         </section>
     </main>
+    <script src="./js/logout.js"></script>
+    <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
 </body>
 </html>
