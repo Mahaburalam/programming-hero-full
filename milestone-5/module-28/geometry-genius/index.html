@@ -78,23 +78,91 @@
                             <span>cm</span>
                         </p>
                         <p class="text-2xl">Area: 
-                            <span id="area-result" class="text-semibold">0</span> cm<sup>2</sup>
+                            <span id="parallelogram-result" class="text-semibold">0</span> cm<sup>2</sup>
                         </p>
                         <div class="card-actions w-full">
                             <button id="parallelogram-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
                         </div>
                     </div>
                 </div>
+                <!-- Rhombus card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A) = .5 * d <sub>1</sub> * d <sub>2</sub></p>
+                        <p>
+                            <input id="rhombus-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="d1">
+                            <span>cm</span>
+                            <input id="rhombus-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="d2">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-2xl">Area: 
+                            <span id="rhombus-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions w-full">
+                            <button id="rhombus-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pentagon card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A) = .5 * p * b</p>
+                        <p>
+                            <input id="pentagon-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="p">
+                            <span>cm</span>
+                            <input id="pentagon-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="b">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-2xl">Area: 
+                            <span id="pentagon-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions w-full">
+                            <button id="pentagon-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = πab</p>
+                        <p>
+                            <input id="ellipse-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="a">
+                            <span>cm</span>
+                            <input id="ellipse-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="b">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-2xl">Area: 
+                            <span id="ellipse-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions w-full">
+                            <button id="ellipse-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- calculator -->
             <div class="w-[400px]">
-                <div class="text-4xl">
+                <div class="text-4xl underline decoration-1">
                     Area Calculation
                 </div>
             </div>
         </div>
     </main>
+    <script src="./js/utilities.js"></script>
     <script src="./js/triangle-calculate.js"></script>
     <script src="./js/rectangle-calculate.js"></script>
+    <script src="./js/parallelogram-calculate.js"></script>
 </body>
 </html>
