@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+    <!-- tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="bg-slate-200 w-full mx-auto px-5 py-5 mt-4">
+        <h2 class="text-4xl font-bold">Interactive</h2>
+        <h3 class="text-2xl font-semibold">Geometry Genius</h3>
+    </header>
+    <main>
+        <!-- main container -->
+        <div class="flex flex-col md:flex-row ms-4 my-8">
+            <!-- geometry shapes -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- first card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/triangle.png" alt="triangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 * b * h</p>
+                        <p>
+                            <input class="w-16 bg-slate-200 px-2" type="text" placeholder="b">
+                            <span>cm</span>
+                            <input class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="h">
+                            <span>cm</span>
+                        </p>
+                        <p>Area: <span></span> </p>
+                        <div class="card-actions w-full">
+                            <button id="triangle-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
+                    </div>
+                  </div>
+                <!-- second card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rectangle.png" alt="rectangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- third card -->
+                <div class="card w-72 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- calculator -->
+            <div class="w-[400px]">
+                <div class="text-4xl">
+                    Area Calculation
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/triangle-calculate.js"></script>
+</body>
+</html>
