@@ -19,7 +19,7 @@
         <div class="flex flex-col md:flex-row ms-4 my-8">
             <!-- geometry shapes -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- first card -->
+                <!-- triangle card -->
                 <div class="card w-72 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="./images/triangle.png" alt="triangle" class="rounded-xl" />
@@ -28,43 +28,63 @@
                         <h2 class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 * b * h</p>
                         <p>
-                            <input class="w-16 bg-slate-200 px-2" type="text" placeholder="b">
+                            <input id="triangle-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="b">
                             <span>cm</span>
-                            <input class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="h">
+                            <input id="triangle-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="h">
                             <span>cm</span>
                         </p>
-                        <p>Area: <span></span> </p>
+                        <p class="text-2xl">Area: 
+                            <span id="area-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
                         <div class="card-actions w-full">
                             <button id="triangle-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
                         </div>
                     </div>
-                  </div>
-                <!-- second card -->
+                </div>
+                <!-- Rectangle card -->
                 <div class="card w-72 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
-                      <img src="./images/rectangle.png" alt="rectangle" class="rounded-xl" />
+                        <img src="./images/rectangle.png" alt="rectangle" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Rectangle</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = w * l</p>
+                        <p>
+                            <input id="rectangle-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="w">
+                            <span>cm</span>
+                            <input id="rectangle-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="l">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-2xl">Area: 
+                            <span id="area-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions w-full">
+                            <button id="rectangle-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
                     </div>
-                  </div>
-                <!-- third card -->
+                </div>
+                <!-- Parallelogram card -->
                 <div class="card w-72 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
-                      <img src="./images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+                        <img src="./images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title">Parallelogram</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b * h</p>
+                        <p>
+                            <input id="parallelogram-base" class="w-16 bg-slate-200 px-2" type="text" placeholder="b">
+                            <span>cm</span>
+                            <input id="parallelogram-height" class="w-16 bg-slate-200 ml-3 px-2" type="text" placeholder="h">
+                            <span>cm</span>
+                        </p>
+                        <p class="text-2xl">Area: 
+                            <span id="area-result" class="text-semibold">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions w-full">
+                            <button id="parallelogram-btn" class="btn btn-primary w-full font-semibold text-xl">Calculate</button>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
             <!-- calculator -->
             <div class="w-[400px]">
@@ -75,5 +95,6 @@
         </div>
     </main>
     <script src="./js/triangle-calculate.js"></script>
+    <script src="./js/rectangle-calculate.js"></script>
 </body>
 </html>
