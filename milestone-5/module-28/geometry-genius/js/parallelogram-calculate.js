@@ -7,5 +7,8 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
     const parallelogramArea = parallelogramBase * parallelogramHeight;
     // console.log(parallelogramArea);
 
+    // validation
+    globalValidation(parallelogramBase, parallelogramHeight)
+
     showAreaResult("parallelogram-result", parallelogramArea);
 })

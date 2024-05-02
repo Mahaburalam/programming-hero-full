@@ -10,12 +10,15 @@ function rectangleCalculation(){
     const rectangleLength = rectangleLengthInput.value;
     rectangleLengthInput.value = '';
 
+    // globalValidation(rectangleWidth, rectangleLength);
+
     // calculate rectangle area 
     const rectangleArea = rectangleWidth * rectangleLength;
     // console.log(rectangleArea);
 
+    
     // show rectangle area
     const showRectangleArea = document.getElementById('rectangle-result')
     showRectangleArea.innerText = rectangleArea;
-
+    
 }
