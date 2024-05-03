@@ -7,4 +7,6 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
 
     // show rhombus area
     showAreaResult("rhombus-result", rhombusArea);
+
+    totalEntryCalculation("rhombus", rhombusArea);
 })

@@ -20,4 +20,6 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
     // show triangle area
     const showTriangleArea = document.getElementById('area-result');
     showTriangleArea.innerText = triangleArea;
+
+    totalEntryCalculation("triangle", triangleArea)
 })

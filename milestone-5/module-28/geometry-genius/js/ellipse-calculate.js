@@ -13,4 +13,6 @@ function ellipseCalculate(){
     }
     // show ellipse area result
     showAreaResult('ellipse-result', ellipseResult)
+
+    totalEntryCalculation("Ellipse", ellipseResult);
 }

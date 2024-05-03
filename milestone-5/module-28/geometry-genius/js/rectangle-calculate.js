@@ -20,5 +20,7 @@ function rectangleCalculation(){
     // show rectangle area
     const showRectangleArea = document.getElementById('rectangle-result')
     showRectangleArea.innerText = rectangleArea;
+
+    totalEntryCalculation('rectangle', rectangleArea);
     
 }

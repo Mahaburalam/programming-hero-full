@@ -11,4 +11,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
     globalValidation(parallelogramBase, parallelogramHeight)
 
     showAreaResult("parallelogram-result", parallelogramArea);
+
+    // show result in summery
+    totalEntryCalculation("parallelogram", parallelogramArea);
 })
