@@ -32,7 +32,6 @@ total number of step:
 */
 function totalEntryCalculation(geometryType, area){
     // console.log(geometryType, area);
-
     // 1.
     const getElement = document.getElementById("calculate-entry");
     // 1.1 child element count
