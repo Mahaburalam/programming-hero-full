@@ -6,6 +6,9 @@ console.log(oddNumber);
 const getterThanFive = myArray.filter(n => n > 5);
 console.log(getterThanFive);
 
+const whenNotMatched = myArray.filter(n => n < 0);
+console.log(whenNotMatched);
+
 /*
     filter return something based on fulfil the condition.
 */
