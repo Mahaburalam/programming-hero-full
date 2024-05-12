@@ -8,6 +8,8 @@ const x = 23;
 const y = x;
 console.log(x, y);
 
+
+
 // non-primitive data type
 const myFunc = function(){
     console.log("test");
@@ -20,3 +22,10 @@ console.log(myObject, anotherObject);
 
 myObject.name = "Nusrat Jahan";
 console.log(myObject, anotherObject);
+
+// non-primitive
+const xx = [23, 2, 9];
+const yy = xx;
+// x.push = 233;
+xx[3] = 29;
+console.log(xx, yy);
