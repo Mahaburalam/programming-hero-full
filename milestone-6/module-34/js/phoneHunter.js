@@ -1,5 +1,5 @@
-const loadPhone = async () => {
-    const fetchPhone = await fetch('https://openapi.programming-hero.com/api/phones?search=iphone');
+const loadPhone = async (searchPhone) => {
+    const fetchPhone = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchPhone}`);
     const response = await fetchPhone.json();
     // console.log(response);
     const data = response.data;
@@ -7,15 +7,28 @@ const loadPhone = async () => {
 }
 
 const displayPhones = (phones) => {
-    // console.log(phones);
+
+    // show card 12
+    phones = phones.slice(0, 12);
+
+    // show all card
+    let showAllButton = document.getElementById('show-all-button');
+    if(phones.length >= 12){
+        // console.log("test");
+        showAllButton.classList.remove('hidden');
+    } else {
+        showAllButton.classList.add('hidden');
+    }
     // step:1
     const phoneContainer = document.getElementById('phones-container');
+
+    // clear text content after search
+    phoneContainer.textContent = '';
     phones.forEach(phone => {
         // console.log(phone);
-
         // step:2
         const phoneCard = document.createElement('div');
-        phoneCard.classList = 'card p-4 bg-base-100 shadow-xl border-2 ms-5';
+        phoneCard.classList = 'card p-4 bg-base-100 shadow-xl border-2 my-5';
 
         // step:3
         phoneCard.innerHTML = `
@@ -33,14 +46,30 @@ const displayPhones = (phones) => {
         `
         // step:4
         phoneContainer.appendChild(phoneCard);
+        spinnerOrLoader(false);
 
     })
-
 }
 
 // search option 
 const buttonSearch = () => {
-    console.log("search button clicked")
+    // console.log("search button clicked");
+    spinnerOrLoader(true);
+    const searchPhones = document.getElementById('phone-search');
+    const getSearchPhone = searchPhones.value;
+    // console.log(searchPhones);
+    loadPhone(getSearchPhone);
+    searchPhones.value = '';
 }
+// loadPhone(searchPhone);
 
-loadPhone();
+// loading
+const spinnerOrLoader = (loader) => {
+    const loaderDiv = document.getElementById('loading');
+    if(loader) {
+        loaderDiv.classList.remove('hidden');
+    }
+    else {
+        loaderDiv.classList.add('hidden');
+    }
+}
