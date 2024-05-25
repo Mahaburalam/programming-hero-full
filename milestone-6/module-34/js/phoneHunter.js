@@ -14,7 +14,7 @@ const displayPhones = (phones) => {
     // show all card
     let showAllButton = document.getElementById('show-all-button');
     if(phones.length >= 12){
-        // console.log("test");
+        console.log("test");
         showAllButton.classList.remove('hidden');
     } else {
         showAllButton.classList.add('hidden');
@@ -40,7 +40,7 @@ const displayPhones = (phones) => {
                 <p>${phone.slug}</p>
                 <h3 class='text-2xl text-center font-semibold'>$999</h3>
                 <div class="card-actions justify-center px-5 mt-4">
-                    <button class="btn btn-primary text-2xl">Show Details</button>
+                    <button onclick='showPhoneDetails("${phone.slug}")' class="btn btn-primary text-2xl">Show Details</button>
                 </div>
             </div>
         `
@@ -73,3 +73,32 @@ const spinnerOrLoader = (loader) => {
         loaderDiv.classList.add('hidden');
     }
 }
+
+// show phone details
+const showPhoneDetails = async (id) => {
+    // console.log("Phone Clicked", id);
+        const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+        const data = await res.json();
+        let getData = data.data;
+        console.log(getData);
+        showSinglePhoneDetails(getData);
+}
+
+const showSinglePhoneDetails = (phone) => {
+    my_modal_5.showModal();
+    const showPhoneDetailsContainer = document.getElementById('show-phone-details-container');
+    showPhoneDetailsContainer.innerHTML = `
+        <img class="w-2/4 mx-auto border-1" src="${phone.image}" alt='phone photo'>
+        <h2 class="text-2xl my-3 font-bold">${phone.name}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Storage:</span> ${phone.mainFeatures.storage}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Display Size:</span> ${phone.mainFeatures.displaySize}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">ChipSet:</span> ${phone.mainFeatures.chipSet}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Memory:</span> ${phone.mainFeatures.memory}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Slug:</span> ${phone.slug}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Release Date:</span> ${phone.releaseDate}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">Brand:</span> ${phone.brand}</h2>
+        <h2 class="text-xl my-3"><span class="text-xl my-3 font-bold">GPS:</span> ${phone.others.GPS}</h2>
+    `
+}
+
+// loadPhone();
