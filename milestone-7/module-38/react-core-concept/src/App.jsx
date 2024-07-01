@@ -1,4 +1,5 @@
 import './App.css'
+import Todo from './Todo';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </Student>
       <Device 
         name="Apple" price="305K"></Device>
+
+      {/* another file component call to this file */}
+      <Todo isShopping="Yes" items="Carrot"></Todo>
     </>
   )
 }
