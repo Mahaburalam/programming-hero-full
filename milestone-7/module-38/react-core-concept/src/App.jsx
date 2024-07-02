@@ -1,9 +1,20 @@
 import './App.css'
+import Singer from './Singer';
 import Todo from './Todo';
 
 function App() {
+  const singers = [
+    {id:1, name:"Pritom Hasan", age: 27},
+    {id:2, name:"Imran Mahmud", age: 32},
+    {id:3, name:"Tahsan Khan", age: 37},
+    {id:4, name:"Kona", age: 29},
+  ]
   return (
     <>
+      {
+        singers.map(singer => <Singer 
+          key = "id" singer = {singer}></Singer>)
+      }
       <h1>Vite + React</h1>
       <Person></Person>
       <Person></Person>
