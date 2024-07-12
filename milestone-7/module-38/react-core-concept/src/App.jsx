@@ -13,7 +13,7 @@ function App() {
     <>
       {
         singers.map(singer => <Singer 
-          key = "id" singer = {singer}></Singer>)
+          key = {singer.id} singer = {singer}></Singer>)
       }
       <h1>Vite + React</h1>
       <Person></Person>
