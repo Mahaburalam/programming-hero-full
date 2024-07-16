@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+import Team from './Team';
 function App() {
   const eventHandler = () => {
     alert("check your name");
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Team></Team>
       <button onClick={eventHandler}>Click</button>
       <br></br>
       <div>
