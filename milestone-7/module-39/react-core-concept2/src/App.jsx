@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import Team from './Team';
 import Users from './Users';
+import Persons from './Persons';
 function App() {
   const eventHandler = () => {
     alert("check your name");
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Persons></Persons>
       <Users></Users>
       <Team></Team>
       <button onClick={eventHandler}>Click</button>
