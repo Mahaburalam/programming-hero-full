@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Country from "../Country/Country";
+import './Countries.css';
 
 const Countries = () => {
     const [ countries, setCountries ] = useState([]);
     useEffect( () => {
-        fetch('https://restcountries.com/v3.1/all')
+        fetch('country-data.json')
         .then(res => res.json())
         .then(data => setCountries(data))
     }, [])
@@ -13,11 +14,13 @@ const Countries = () => {
         <div>
             <h3>Countries Information Showing Using API</h3>
             <h2>Total Countries: {countries.length}</h2>
-            {
-                countries.map(country => <Country 
-                    key={country.cca3}
-                    country={country}></Country>)
-            }
+            <div className="countries-style">
+                {
+                    countries.map(country => <Country 
+                        key={country.cca3}
+                        country={country}></Country>)
+                }
+            </div>
         </div>
     );
 };
