@@ -1,27 +1,18 @@
-import { useState } from 'react';
 import './Country.css';
 
-const Country = ({country}) => {
-    console.log(country);
-    const {capital, flags, name, population, region, timezones, currencies} = country;
-
-    const [visited, setVisited] = useState(false);
-
-    const isVisited = () => {
-        setVisited(!visited);
-    }
-
+const Country = ({countryData}) => {
+    console.log(countryData);
+    const {name, flags, capital, region, area, population, continents, timezones, } = countryData;
     return (
-        <div className="single-country-style">
-            <img src={flags.svg} style={{width:"300px", display:"block", margin:"0 auto", paddingTop:"7px"}}></img>
-            <h3>Country Name: {name.common}</h3>
-            <p>Population: {population}</p>
-            <p>Region: {region}</p>
+        <div className="county-style">
+            <img style={{width:"320px", height:"213px"}} src={flags.png} alt='county-flag'></img>
+            <p>Country Name: {name.common}</p>
             <p>Capital: {capital}</p>
-            {/* <p>Currencies: {currencies[0][name]}</p> */}
-            <p>Time Zone: {timezones}</p>
-            <button onClick={isVisited}>{ visited? "Visited": "Going"}</button>
-            { visited? "I already visited" : "I will visit one day"}
+            <p>Region: {region}</p>
+            <p>Area: {area}</p>
+            <p>Population: {population}</p>
+            <p>Continents: {continents}</p>
+            {/* <p>Time Zone: {timezones}</p> */}
         </div>
     );
 };

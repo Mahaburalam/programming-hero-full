@@ -1,9 +1,6 @@
-.single-country-style{
-    border: 3px solid burlywood;
+.county-style{
+    border: 2px solid greenyellow;
     border-radius: 12px;
-    padding: 5px 20pxJ;
-    margin: 9px;
-    width: 50%;
-    display: block;
-    
+    padding: 3px 12px;
+    margin: 7px;
 }

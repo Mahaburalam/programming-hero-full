@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
-import Country from "../Country/Country";
 import './Countries.css';
+import Country from "../Country/Country";
 
 const Countries = () => {
-    const [ countries, setCountries ] = useState([]);
+    const [countries, setCountries]= useState([]);
     useEffect( () => {
-        fetch('country-data.json')
+        fetch('https://restcountries.com/v3.1/all')
         .then(res => res.json())
         .then(data => setCountries(data))
-    }, [])
-    
+    },[]);
     return (
         <div>
-            <h3>Countries Information Showing Using API</h3>
-            <h2>Total Countries: {countries.length}</h2>
-            <div className="countries-style">
+            <h2>Total Number of Countries: {countries.length}</h2>
+            <div className="country-container">
                 {
-                    countries.map(country => <Country 
+                    countries.map( country => <Country 
                         key={country.cca3}
-                        country={country}></Country>)
+                        countryData={country}>
+                    </Country>)
                 }
             </div>
         </div>
