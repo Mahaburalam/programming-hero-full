@@ -2,7 +2,8 @@ import './Country.css';
 
 const Country = ({countryData}) => {
     console.log(countryData);
-    const {name, flags, capital, region, area, population, continents, timezones, } = countryData;
+    // eslint-disable-next-line no-unused-vars
+    const {name, flags, capital, region, area, population, continents, timezones} = countryData;
     return (
         <div className="county-style">
             <img style={{width:"320px", height:"213px"}} src={flags.png} alt='county-flag'></img>
